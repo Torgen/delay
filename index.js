@@ -14,7 +14,7 @@ const createDelay = ({clearTimeout: clear, setTimeout: set, willResolve}) => (ms
 	let timeoutId;
 	let settle;
 	let rejectFn;
-	const c = clear || clearTimeout
+	const c = clear || clearTimeout;
 
 	const signalListener = () => {
 		c(timeoutId);
